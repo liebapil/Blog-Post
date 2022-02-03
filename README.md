@@ -16,7 +16,7 @@
 
 
 ### ***Description:***
-* This is a CRD program
+* This is a CURD program
 * A blog site that you can post anything you would like to show
 
 
@@ -38,7 +38,7 @@ to come
 
 ### ***Future Updates:***
 - [ ] Make reviews 
-- [ ] create a update section 
+
 
 
 
