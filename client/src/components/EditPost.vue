@@ -7,7 +7,6 @@
         :value="title"
         name="title"
         type="text"
-        required
       />
       <input
         @input="handleChange"
@@ -15,7 +14,6 @@
         :value="username"
         name="username"
         type="text"
-        required
       />
       <input
         @input="handleChange"
@@ -23,7 +21,6 @@
         :value="description"
         name="description"
         type="text"
-        required
       />
       <input
         @input="handleChange"
@@ -31,7 +28,6 @@
         :value="photo_url"
         name="photo_url"
         type="url"
-        required
       />
       <button>Submit</button>
     </form>
@@ -41,27 +37,43 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'CreatePost',
+  name: 'EditPost',
   data: () => ({
+    selectedData: null,
     title: '',
     username: '',
     description: '',
     photo_url: ''
   }),
-  mounted: async function () {},
+  mounted: async function () {
+    await this.getPostDetails();
+  },
   methods: {
     handleChange(e) {
       this[e.target.name] = e.target.value;
     },
     async handleSubmit(e) {
       e.preventDefault();
-      await axios.post(`http://localhost:8000/posts/`, {
-        title: this.title,
-        username: this.username,
-        description: this.description,
-        photo_url: this.photo_url
-      });
-      this.$router.push(`/`);
+      await axios.put(
+        `http://localhost:8000/posts/${this.$route.params.post_id}`,
+        {
+          title: this.title,
+          username: this.username,
+          description: this.description,
+          photo_url: this.photo_url
+        }
+      );
+      location.reload();
+    },
+    async getPostDetails() {
+      const res = await axios.get(
+        `http://localhost:8000/posts/${this.$route.params.post_id}`
+      );
+      this.title = res.data.title;
+      this.username = res.data.username;
+      this.description = res.data.description;
+      this.photo_url = res.data.photo_url;
+      //   this.selectedData = res.data;
     }
   }
 };
