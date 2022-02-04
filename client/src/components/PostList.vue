@@ -50,6 +50,8 @@ export default {
 h1{
   font-family: 'Luckiest Guy', cursive;
   font-size:3em;
+  color:white;
+  text-decoration: underline;
   
 }
 .col {

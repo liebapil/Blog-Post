@@ -1,7 +1,8 @@
 <template>
 <div>
-  <h1>Post your blogs on Blog Post</h1>
+  <h1 class="post">Post your blogs on Blog Post!</h1>
   <hr />
+
   <div class="home_container">
     
   <img class= "image_1" src="https://thumbs.dreamstime.com/b/idea-vector-concept-smiling-young-woman-sitting-tea-use-laptop-thinking-cartoon-illustration-vector-idea-vector-184406744.jpg" alt="thinking">
@@ -10,9 +11,19 @@
   <img class="image_4" src="https://www.emergingedtech.com/wp/wp-content/uploads/2018/04/blogging.jpg" alt="blog_image">
   <img class="image_5" src="https://cdn3.iconfinder.com/data/icons/communication-3-4/512/129-512.png" alt="post_image">
   </div>
+  <hr />
+  <section class="aboutsection">
+    <img class="abouttext" src="https://avatars.githubusercontent.com/u/67972965?v=4" href="https://www.linkedin.com/in/abidurrahmandipta"/>
+
+                <img class="abouttext" src="https://avatars.githubusercontent.com/u/87242570?v=4" href="https://www.linkedin.com/in/nashid-alam-02602147/"/>
+
+                <img class="abouttext" src="https://avatars.githubusercontent.com/u/58853852?v=4" href="https://www.linkedin.com/in/calvin-menyfield/"/>
+
+                <img class="abouttext" src="https://avatars.githubusercontent.com/u/93634324?v=4" href="https://www.linkedin.com/in/lieba-pil/"/>
+  </section>
   </div>
 </template>
-
+https://www.linkedin.com/in/lieba-pil/
 <script>
 export default{
 name: 'Home'
@@ -24,14 +35,15 @@ name: 'Home'
 h1{
   font-family: 'Luckiest Guy', cursive;
   font-size:3em;
-  color:white;
+  color:rgb(102, 33, 96);
+  text-align: center;
 }
 /* Animation */
-p {
+/* .post {
   white-space: nowrap;
   animation: animated-text 4s linear 1s 1 normal both,
              animated-cursor 800ms linear infinite;
-}
+} */
 
 /* text animation */
 
@@ -50,6 +62,7 @@ p {
   animation-name: image_5;
   animation-duration: 4s;
   animation-delay: 1s;
+  animation-iteration-count: 4s
 }
 
 @keyframes image_5 {
@@ -106,9 +119,31 @@ img{
   max-height: 40vh;
 }
 .home_container{
+  align-items: center;
  padding: 2em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 20em);
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 22.5em);
+  justify-content: space-around;
+  animation-name: allimages;
+  animation-duration: 5s;
+  animation-delay: 6s;
+}
+@keyframes allimages {
+0%   {grid-template-columns: repeat(auto-fill, 22.5em);}
+  25%  {grid-template-columns: repeat(auto-fill, 20em)}
+  50%  {grid-template-columns: repeat(auto-fill, 17em)}
+  75%  {grid-template-columns: repeat(auto-fill, 14.5em)}
+  100% {grid-template-columns: repeat(auto-fill, 11em);}
+}
+
+.abouttext{
+  position:relative;
+  top: 8em;
+  cursor: pointer;
+  max-height: 10vh;
+}
+.aboutsection{
+  display:flex;
+  justify-content:space-evenly;
 }
 </style>

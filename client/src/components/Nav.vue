@@ -44,16 +44,16 @@ nav a {
 .home_image{
 margin: auto;
 position: relative;
-bottom: 60px;
+bottom: 2.8em;
   float: left;
   border: none;
   border-radius: 50%;
-  max-height: .2rem;
   transition: all 0.5s;
-  object-fit: cover;
-    object-position: 1px 10px;
+  object-fit: relative;
+    object-position: 0 .8rem ;
+    max-height:auto;
 }
 .home_image:hover{
-  opacity: .6;
+  opacity: .4;
 }
 </style>

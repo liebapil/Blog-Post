@@ -25,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: rgb(21, 168, 100);
+  background-color: rgb(85, 81, 131);
   color: #2c3e50;
   margin: 0;
 }
