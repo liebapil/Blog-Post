@@ -10,6 +10,7 @@
         :value="title"
         name="title"
         type="text"
+        required
       />
 
       <input
@@ -19,6 +20,7 @@
         :value="username"
         name="username"
         type="text"
+        required
       />
 
       <textarea
@@ -28,7 +30,10 @@
         :value="description"
         name="description"
         type="text"
+
         id="description"
+        required
+
       />
       <textarea
       required
@@ -37,7 +42,9 @@
         :value="photo_url"
         name="photo_url"
         type="url"
-        
+
+        required
+
       />
       <hr />
       <button class="button-29">Submit</button>

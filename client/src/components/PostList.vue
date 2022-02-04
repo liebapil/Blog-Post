@@ -36,7 +36,6 @@ export default {
     async getPosts() {
       const res = await axios.get(`http://localhost:8000/posts/`);
       this.selectedList = res.data;
-      console.log(res);
     },
     selectPost(postId) {
       this.$router.push(`/posts/${postId}`);

@@ -1,10 +1,15 @@
 <template>
+
 <div>
-  <div class="static" v-bind:class="{ active: !confirm, 'non-opacity': confirm}">
+  <div v-if="!edited" class="static" v-bind:class="{ active: !confirm, 'non-opacity': confirm}">
     <h1>{{ selectedDetail.title }}</h1>
     <img :src="selectedDetail.photo_url" alt="something" />
     <p>{{ selectedDetail.description }}</p>
     <button class="delete_button" @click="confirmWindow">Delete</button>
+    <button @click="startEdit()">Edit</button>
+    </div>
+    <div v-if="edited">
+      <EditPost />
     </div>
     <section v-if="confirm">
                 <div class="confirm">
@@ -21,17 +26,26 @@
                 </div>
             </div>
     </section>
+
   </div>
 
 </template>
 
 <script>
 import axios from 'axios';
+import EditPost from './EditPost.vue';
 export default {
   name: 'PostDetail',
+  components: {
+    EditPost
+  },
   data: () => ({
     selectedDetail: null,
+
     confirm: false
+
+    edited: false
+
   }),
   mounted: async function () {
     await this.getPostDetails();
@@ -48,6 +62,7 @@ export default {
         `http://localhost:8000/posts/${this.$route.params.post_id}`
       );
       this.$router.push(`/`);
+
       alert('You post has been deleted')
     },
     confirmWindow() {
@@ -55,6 +70,11 @@ export default {
     },
     unConfirm(){
       this.confirm = false
+
+    },
+    startEdit() {
+      this.edited = true;
+
     }
   }
 };
