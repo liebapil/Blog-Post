@@ -38,31 +38,12 @@ h1{
   color:rgb(102, 33, 96);
   text-align: center;
 }
-/* Animation */
-/* .post {
-  white-space: nowrap;
-  animation: animated-text 4s linear 1s 1 normal both,
-             animated-cursor 800ms linear infinite;
-} */
 
-/* text animation */
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 105vw;}
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
 .image_5{
   animation-name: image_5;
   animation-duration: 4s;
   animation-delay: 1s;
-  animation-iteration-count: 4s
+  animation-iteration-count: 4s;
 }
 
 @keyframes image_5 {

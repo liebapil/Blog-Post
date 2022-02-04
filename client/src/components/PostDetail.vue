@@ -15,10 +15,10 @@
                 <div class="confirm">
                 <div class="confirm__window">
                     <div class="confirm__titlebar">
-                        <span class="confirm__title">Are You Sure?</span>
+                        <span class="confirm__title">Delete {{selectedDetail.title}}?</span>
                         <button @click="unConfirm()" class="confirm__close">X</button>
                     </div>
-                    <div class="confirm__content">You Cannot Undo This Action</div>
+                    <div class="confirm__content">You cannot undue this action</div>
                     <div class="confirm__buttons">
                         <button @click="deletePost()" class="confirm__button confirm__button--ok confirm__button--fill">OK</button>
                         <button @click="unConfirm()" class="confirm__button confirm__button--cancel">Cancel</button>
