@@ -5,8 +5,8 @@
     <h1>{{ selectedDetail.title }}</h1>
     <img :src="selectedDetail.photo_url" alt="something" />
     <p>{{ selectedDetail.description }}</p>
-    <button class="delete_button" @click="confirmWindow">Delete</button>
     <button class="delete_button" @click="startEdit()">Edit</button>
+    <button class="delete_button" @click="confirmWindow">Delete</button>
     </div>
     <div v-if="edited">
       <EditPost />
@@ -104,7 +104,7 @@ transition: all 0.4s
 
 }
 button{
-  margin: .5em;
+  padding: 2em;
 }
 .confirm {
     position: fixed;
@@ -228,7 +228,7 @@ button{
   height: 4em;
   border-radius: 2em;
   padding: 0.4em 1.2em;
-  margin: 0 0.1em 0.1em 0;
+  margin: 2em;
   display: inline-block;
   background-color: rgb(94, 8, 8);
   border-radius: 0.3em;
@@ -237,6 +237,12 @@ button{
   font-size: .8em;
   width: 10em;
   cursor: pointer;
+}
+
+p{
+  background-color: rgba(222, 184, 135, 0.336);
+  font-size: 1.5em;
+  color: white;
 }
 </style>
 
