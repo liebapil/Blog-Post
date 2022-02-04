@@ -26,7 +26,7 @@ nav {
   font-size: 2em;
   text-align:end;
   background: #5695c9;
-  padding: 1em;
+  padding: 2em;
   border: solid .3em;
   border-top-right-radius: 2em 2em ;
   border-bottom-left-radius: 2em 2em;
@@ -44,11 +44,11 @@ nav a {
 .home_image{
 margin: auto;
 position: relative;
-bottom: 40px;
+bottom: 60px;
   float: left;
   border: none;
   border-radius: 50%;
-  max-height: .2em;
+  max-height: .2rem;
   transition: all 0.5s;
   object-fit: cover;
     object-position: 1px 10px;
