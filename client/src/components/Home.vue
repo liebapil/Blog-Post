@@ -8,8 +8,9 @@
   <img class= "image_1" src="https://thumbs.dreamstime.com/b/idea-vector-concept-smiling-young-woman-sitting-tea-use-laptop-thinking-cartoon-illustration-vector-idea-vector-184406744.jpg" alt="thinking">
   <img class="image_2" src="https://beebom.com/wp-content/uploads/2021/04/10-Best-Typing-Test-Websites-to-Check-Your-Typing-Speed.jpg?w=750&quality=75" alt="typing">
   <img class="image_3" src="https://cdn.imgbin.com/25/19/4/ui-design-icon-computer-science-icon-blog-icon-VrKPEvFn.jpg" alt="online_cursor">
-  <img class="image_4" src="https://www.emergingedtech.com/wp/wp-content/uploads/2018/04/blogging.jpg" alt="blog_image">
-  <img class="image_5" src="https://cdn3.iconfinder.com/data/icons/communication-3-4/512/129-512.png" alt="post_image">
+  <router-link to="/allposts" name="PostList" ><img class="image_4" src="https://www.emergingedtech.com/wp/wp-content/uploads/2018/04/blogging.jpg" alt="blog_image"></router-link>
+  <router-link to="/create" name="CreatePost"><img class="image_5" src="https://cdn3.iconfinder.com/data/icons/communication-3-4/512/129-512.png" alt="post_image"></router-link>
+  
   </div>
   <hr />
   <section class="aboutsection">
@@ -44,6 +45,7 @@ h1{
   animation-duration: 4s;
   animation-delay: 1s;
   animation-iteration-count: 4s;
+  cursor: pointer;
 }
 
 @keyframes image_5 {
@@ -56,6 +58,7 @@ h1{
 animation-name: image_4;
   animation-duration: 3s;
   animation-delay: 2s;
+  cursor: pointer;
 }
 @keyframes image_4 {
 

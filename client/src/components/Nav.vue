@@ -13,9 +13,9 @@ export default {
 </script>
 
 <style>
-.router-link-exact-active {
+/* .router-link-exact-active {
   color: rgb(14, 107, 119);
-}
+} */
 
 .Home{
   float: left;
@@ -32,6 +32,10 @@ nav {
   border-bottom-left-radius: 2em 2em;
   border-bottom-right-radius: 2em 2em;
   border-top-left-radius: 2em 2em;
+}
+
+nav a:hover{
+  color: rgb(14, 107, 119);
 }
 
 nav a {
