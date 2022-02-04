@@ -15,7 +15,7 @@
         name="username"
         type="text"
       />
-      <input
+      <textarea
         @input="handleChange"
         placeholder="Description"
         :value="description"

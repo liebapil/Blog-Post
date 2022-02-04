@@ -5,7 +5,7 @@
     <h1>{{ selectedDetail.title }}</h1>
     <img :src="selectedDetail.photo_url" alt="something" />
     <p>{{ selectedDetail.description }}</p>
-    <button class="delete_button" @click="startEdit()">Edit</button>
+    <button class="button-33" @click="startEdit()">Edit</button>
     <button class="delete_button" @click="confirmWindow">Delete</button>
     </div>
     <div v-if="edited">
@@ -18,7 +18,7 @@
                         <span class="confirm__title">Are You Sure?</span>
                         <button @click="unConfirm()" class="confirm__close">X</button>
                     </div>
-                    <div class="confirm__content">This Post will be lost forever</div>
+                    <div class="confirm__content">You Cannot Undo This Action</div>
                     <div class="confirm__buttons">
                         <button @click="deletePost()" class="confirm__button confirm__button--ok confirm__button--fill">OK</button>
                         <button @click="unConfirm()" class="confirm__button confirm__button--cancel">Cancel</button>
@@ -113,7 +113,7 @@ button{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
+    padding: 10rem;
     box-sizing: border-box;
     animation-name: confirm---open;
     animation-duration: 0.2s;
@@ -124,15 +124,12 @@ button{
     justify-content: center;
 }
 
-.confirm--close {
-    animation-name: confirm---close;
-}
-
 .confirm__window {
     width: 100%;
     max-width: 600px;
     background: white;
-    font-size: 14px;
+    font-size: 1.2em;
+    font-weight: 900;
     font-family: 'Noto Sans', sans-serif;
     border-radius: 5px;
     overflow: hidden;
@@ -149,7 +146,7 @@ button{
 .confirm__titlebar,
 .confirm__content,
 .confirm__buttons {
-    padding: 1.25em;
+    padding: .4em;
     font-size: larger;
     font-family: bolder;
 }
@@ -225,24 +222,67 @@ button{
 }
 
 .delete_button{
-  height: 4em;
+  height: 2.6em;
   border-radius: 2em;
-  padding: 0.4em 1.2em;
-  margin: 2em;
+  padding: 0.4em 1.2em ;
+  margin: .5em;
   display: inline-block;
   background-color: rgb(94, 8, 8);
-  border-radius: 0.3em;
-  border: 0.1em double #cccccc;
+  border: 0.1em double #0e0101;
   color: #eeeeee;
   font-size: .8em;
-  width: 10em;
+  font-weight: 900;
   cursor: pointer;
+  box-shadow: .01rem .01rem .01rem .01rem rgb(29, 12, 7);
+  transition: all 380ms;
 }
 
+.delete_button:hover{
+  transform:scale(1.05) rotate(-1deg);
+  box-shadow: .02rem .02rem .02rem .02rem rgb(40, 12, 7);
+}
 p{
   background-color: rgba(222, 184, 135, 0.336);
   font-size: 1.5em;
   color: white;
+  white-space: pre-line;
+}
+img{
+  border-radius: 50%;
+  min-height: 25vh;
+  float: left;
+  border-color:cornflowerblue;
+}
+h1{
+  text-align: center;
+  font-size: 4em;
+  color:white;
+  font-family: 'Titan One', cursive;
+  text-decoration: underline;
+
+}
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
 </style>
 
