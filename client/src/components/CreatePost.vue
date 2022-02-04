@@ -10,7 +10,7 @@
         :value="title"
         name="title"
         type="text"
-        required
+        
       />
 
       <input
@@ -20,7 +20,7 @@
         :value="username"
         name="username"
         type="text"
-        required
+        
       />
 
       <textarea
@@ -32,7 +32,7 @@
         type="text"
 
         id="description"
-        required
+
 
       />
       <textarea
@@ -43,7 +43,7 @@
         name="photo_url"
         type="url"
 
-        required
+
 
       />
       <hr />

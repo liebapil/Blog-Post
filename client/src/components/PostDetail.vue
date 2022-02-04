@@ -42,7 +42,7 @@ export default {
   data: () => ({
     selectedDetail: null,
 
-    confirm: false
+    confirm: false,
 
     edited: false
 
