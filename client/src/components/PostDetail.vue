@@ -6,7 +6,7 @@
     <img :src="selectedDetail.photo_url" alt="something" />
     <p>{{ selectedDetail.description }}</p>
     <button class="delete_button" @click="confirmWindow">Delete</button>
-    <button @click="startEdit()">Edit</button>
+    <button class="delete_button" @click="startEdit()">Edit</button>
     </div>
     <div v-if="edited">
       <EditPost />
