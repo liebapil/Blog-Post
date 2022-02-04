@@ -60,7 +60,8 @@ export default {
     title: '',
     username: '',
     description: '',
-    photo_url: ''
+    photo_url: '',
+    confirm: false
   }),
   mounted: async function () {},
   methods: {
@@ -77,7 +78,8 @@ export default {
       });
       alert('Submitted Succesfully')
       this.$router.push(`/`);
-    }
+    },
+    
   }
 };
 </script>
